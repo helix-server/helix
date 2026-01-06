@@ -1,5 +1,5 @@
 {
-  "name": "helix",
+	"name": "@helix-server/core",
   "version": "0.1.0",
   "description": "Backend-framework",
   "homepage": "https://github.com/helix-tcp/helix#readme",
