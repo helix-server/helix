@@ -1,8 +1,11 @@
 {
-  "name": "example-hello-world",
+  "name": "example-multi-middlewares",
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "scripts": {
+		"serve": "bun src/index.ts"
+	},
   "devDependencies": {
     "@types/bun": "latest"
   },
@@ -10,7 +13,7 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "@helix-server/core": "^0.1.0",
-    "@helix-server/utils": "^0.1.0"
+	  "@helix-server/core": "workspace:*",
+	  "@helix-server/utils": "workspace:*"
   }
 }

@@ -1,5 +1,5 @@
 import { expect, test } from 'bun:test'
 
-test('should greet correctly', () => {
+test('Should true be true', () => {
 	expect([true, false][0]).toBe(true)
 })

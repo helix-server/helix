@@ -1,0 +1,10 @@
+{
+	"extends": "@repo/typescript-config/core.json",
+	"compilerOptions": {
+		"rootDir": ".",
+		"outDir": "dist",
+		"types": ["@types/bun", "node"]
+	},
+	"include": ["src/**/*"],
+	"exclude": ["node_modules", "dist", "bunup.config.ts"]
+}

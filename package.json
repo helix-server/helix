@@ -26,6 +26,7 @@
   "private": true,
   "workspaces": [
   	"apps/*",
+   	"apps/examples/*",
     "packages/*"
   ],
   "repository": {

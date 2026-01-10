@@ -28,6 +28,32 @@
         "@repo/typescript-config": "workspace:*",
       },
     },
+    "apps/examples/hello-world": {
+      "name": "example-hello-world",
+      "dependencies": {
+        "@helix-server/core": "workspace:*",
+        "@helix-server/utils": "workspace:*",
+      },
+      "devDependencies": {
+        "@types/bun": "latest",
+      },
+      "peerDependencies": {
+        "typescript": "^5",
+      },
+    },
+    "apps/examples/multiple-middlewares": {
+      "name": "example-multi-middlewares",
+      "dependencies": {
+        "@helix-server/core": "workspace:*",
+        "@helix-server/utils": "workspace:*",
+      },
+      "devDependencies": {
+        "@types/bun": "latest",
+      },
+      "peerDependencies": {
+        "typescript": "^5",
+      },
+    },
     "packages/biome-config": {
       "name": "@repo/biome-config",
       "version": "0.0.0",
@@ -61,6 +87,25 @@
     },
     "packages/utils": {
       "name": "@helix-server/utils",
+      "version": "0.1.0",
+      "devDependencies": {
+        "@biomejs/biome": "^2.3.8",
+        "@repo/biome-config": "workspace:*",
+        "@repo/typescript-config": "workspace:*",
+        "@types/bun": "^1.3.3",
+        "@types/node": "^25.0.3",
+        "bumpp": "^10.3.2",
+        "bunup": "^0.16.10",
+        "simple-git-hooks": "^2.13.1",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "@helix-server/core": "workspace:*",
+        "typescript": ">=4.5.0",
+      },
+      "optionalPeers": [
+        "typescript",
+      ],
     },
   },
   "packages": {
@@ -1357,6 +1402,10 @@
     "events": ["events@3.3.0", "", {}, "sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q=="],
 
     "events-universal": ["events-universal@1.0.1", "", { "dependencies": { "bare-events": "^2.7.0" } }, "sha512-LUd5euvbMLpwOF8m6ivPCbhQeSiYVNb8Vs0fQ8QjXo0JTkEHpz8pxdQf0gStltaPpw0Cca8b39KxvK9cfKRiAw=="],
+
+    "example-hello-world": ["example-hello-world@workspace:apps/examples/hello-world"],
+
+    "example-multi-middlewares": ["example-multi-middlewares@workspace:apps/examples/multiple-middlewares"],
 
     "execa": ["execa@8.0.1", "", { "dependencies": { "cross-spawn": "^7.0.3", "get-stream": "^8.0.1", "human-signals": "^5.0.0", "is-stream": "^3.0.0", "merge-stream": "^2.0.0", "npm-run-path": "^5.1.0", "onetime": "^6.0.0", "signal-exit": "^4.1.0", "strip-final-newline": "^3.0.0" } }, "sha512-VyhnebXciFV2DESc+p6B+y0LjSm0krU4OgJN44qFAhBY0TJ+1V61tYD2+wHusZ6F9n5K+vl8k0sTy7PEfV4qpg=="],
 
