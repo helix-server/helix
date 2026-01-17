@@ -9,3 +9,8 @@ dist/
 *.log
 .turbo/
 .cache/
+
+# Bazel
+bazel-*
+.bazel-cache/
+.bazelrc.user

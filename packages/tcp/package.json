@@ -1,9 +1,15 @@
 {
   "type": "module",
   "name": "@helix-server/tcp",
+  "version": "0.1.0",
+  "description": "TCP server implementation for Helix server framework",
+  "main": "src/tcp_server.cc",
   "scripts": {
-    "build": "echo \"Building tcp package...\"",
-    "publish": "echo \"Publishing tcp package...\"",
-    "test": "echo \"Running tests for tcp package...\""
-  }
+    "build": "bazel build //packages/tcp:tcp_server",
+    "test": "bazel test //packages/tcp:tcp_server_test",
+    "test:manual": "g++ -std=c++17 -I./include src/tcp_server.cc test/manual_test.cc -o /tmp/tcp_test && /tmp/tcp_test",
+    "clean": "bazel clean"
+  },
+  "keywords": ["tcp", "server", "helix", "c++", "networking"],
+  "license": "MIT"
 }

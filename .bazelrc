@@ -1,0 +1,11 @@
+# C++ configuration
+build --cxxopt=-std=c++17
+build --host_cxxopt=-std=c++17
+
+# Output configuration
+build --verbose_failures
+build --color=yes
+
+# Test configuration
+test --test_output=errors
+test --test_summary=detailed
