@@ -11,3 +11,8 @@ export type RouteType = RouteSimple & {
 	requiredMiddlewares: Set<MiddlewareType>
 	middlewares?: { class: MiddlewareType; args?: unknown[] }[]
 }
+
+export type RouteGroupOptions = {
+	prefix?: string
+	middlewares?: RouteSimple['middlewares']
+}
